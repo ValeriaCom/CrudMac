@@ -22,13 +22,72 @@ public class AutomaCrud implements State{
     }
 
     
-    private class Ricerca {
+    private class RicercaEvent implements State{
+
+        public RicercaEvent() {
+        }
+
+        
+
+        @Override
+        public void next(Event e) {  
+            
+        }
         
     }
     
+    private class AddEvent implements State{
+
+        public AddEvent() {
+        }
+
+        @Override
+        public void next(Event e) {
+        }
+    }
     
+    private class RimuoviEvent implements State{
+
+        public RimuoviEvent() {
+        }
+
+        @Override
+        public void next(Event e) {
+        }
     
+    }
     
+     private class ModificaEvent implements State{
+
+        public ModificaEvent() {
+        }
+
+        @Override
+        public void next(Event e) {
+            
+        }
+     
+     }
     
-    
+     private class VisualizzaEvent implements State{
+
+        public VisualizzaEvent() {
+        }
+
+        @Override
+        public void next(Event e) {
+        }
+         
+     }
+     
+      private class SelezionaEvent implements State{
+
+        public SelezionaEvent() {
+        }
+
+        @Override
+        public void next(Event e) {
+        }
+      
+      }
 }
