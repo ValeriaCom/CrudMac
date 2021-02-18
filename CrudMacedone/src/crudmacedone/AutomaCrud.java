@@ -45,6 +45,10 @@ public class AutomaCrud implements State {
 
         @Override
         public void next(Event e) {
+            if (e instanceof ConfermaEvent){
+            }
+            else if (e instanceof AnnullaEvent){
+            }
         }
     }
 
@@ -55,6 +59,10 @@ public class AutomaCrud implements State {
 
         @Override
         public void next(Event e) {
+            if (e instanceof ConfermaEvent){
+            }
+            else if (e instanceof AnnullaEvent){
+            }
         }
 
     }
@@ -62,10 +70,15 @@ public class AutomaCrud implements State {
     private class ModificaEvent implements State {
 
         public ModificaEvent() {
+            
         }
 
         @Override
         public void next(Event e) {
+            if (e instanceof ConfermaEvent){
+            }
+            else if (e instanceof AnnullaEvent){
+            }
 
         }
 
@@ -78,6 +91,16 @@ public class AutomaCrud implements State {
 
         @Override
         public void next(Event e) {
+            if (e instanceof AddEvent){
+            }
+            else if (e instanceof ModificaEvent){
+            }
+            else if (e instanceof RimuoviEvent){
+            }
+            else if (e instanceof SelezionaEvent){
+            }
+            else if (e instanceof RicercaEvent){
+            }
         }
 
     }
