@@ -12,6 +12,12 @@ package crudmacedone;
 public class AutomaCrud implements State {
 
     private State stato;
+    private AutomabileCrud ui;
+
+    public AutomaCrud(State stato, AutomabileCrud ui) {
+        this.stato = new Ricerca();
+        this.ui = ui;
+    }
 
     @Override
     public void next(Event e) {
@@ -21,9 +27,10 @@ public class AutomaCrud implements State {
         System.out.println("Siamo arrivati nello stato " + stato + "\n");
     }
 
-    private class RicercaEvent implements State {
+    private class Ricerca implements State {
 
-        public RicercaEvent() {
+        public Ricerca() {
+            ui.entraStatoRicerca();
         }
 
         @Override
@@ -38,68 +45,65 @@ public class AutomaCrud implements State {
         }
     }
 
-    private class AddEvent implements State {
+    private class Add implements State {
 
-        public AddEvent() {
+        public Add() {
+            ui.entraStatoAdd();
         }
 
         @Override
         public void next(Event e) {
-            if (e instanceof ConfermaEvent){
-            }
-            else if (e instanceof AnnullaEvent){
+            if (e instanceof ConfermaEvent) {
+            } else if (e instanceof AnnullaEvent) {
             }
         }
     }
 
-    private class RimuoviEvent implements State {
+    private class Rimuovi implements State {
 
-        public RimuoviEvent() {
+        public Rimuovi() {
+            ui.entraStatoRimuovi();
         }
 
         @Override
         public void next(Event e) {
-            if (e instanceof ConfermaEvent){
-            }
-            else if (e instanceof AnnullaEvent){
+            if (e instanceof ConfermaEvent) {
+            } else if (e instanceof AnnullaEvent) {
             }
         }
 
     }
 
-    private class ModificaEvent implements State {
+    private class Modifica implements State {
 
-        public ModificaEvent() {
-            
+        public Modifica() {
+            ui.entraStatoModifica();
+
         }
 
         @Override
         public void next(Event e) {
-            if (e instanceof ConfermaEvent){
-            }
-            else if (e instanceof AnnullaEvent){
+            if (e instanceof ConfermaEvent) {
+            } else if (e instanceof AnnullaEvent) {
             }
 
         }
 
     }
 
-    private class VisualizzaEvent implements State {
+    private class Visualizza implements State {
 
-        public VisualizzaEvent() {
+        public Visualizza() {
+            ui.entraStatoVisualizza();
         }
 
         @Override
         public void next(Event e) {
-            if (e instanceof AddEvent){
-            }
-            else if (e instanceof ModificaEvent){
-            }
-            else if (e instanceof RimuoviEvent){
-            }
-            else if (e instanceof SelezionaEvent){
-            }
-            else if (e instanceof RicercaEvent){
+            if (e instanceof AddEvent) {
+            } else if (e instanceof ModificaEvent) {
+            } else if (e instanceof RimuoviEvent) {
+            } else if (e instanceof SelezionaEvent) {
+            } else if (e instanceof RicercaEvent) {
             }
         }
 

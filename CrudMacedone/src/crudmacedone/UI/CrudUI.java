@@ -35,11 +35,13 @@ public class CrudUI extends javax.swing.JFrame {
         jButtonRimuovi = new javax.swing.JButton();
         jButtonNuova = new javax.swing.JButton();
         jButtonCerca = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelCodice = new javax.swing.JLabel();
+        jLabelDescrizione = new javax.swing.JLabel();
         jButtonSeleziona = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabelCercaPerCodice = new javax.swing.JLabel();
+        jTextFieldInserisciCodice = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,25 +58,40 @@ public class CrudUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonModifica.setText("jButton1");
+        jButtonModifica.setText("Modifica");
+        jButtonModifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificaActionPerformed(evt);
+            }
+        });
 
-        jButtonConferma.setText("jButton2");
+        jButtonConferma.setText("Conferma");
 
-        jButtonAnnulla.setText("jButton3");
+        jButtonAnnulla.setText("Annulla");
 
-        jButtonRimuovi.setText("jButton4");
+        jButtonRimuovi.setText("Rimuovi");
 
-        jButtonNuova.setText("jButton5");
+        jButtonNuova.setText("Nuova");
 
-        jButtonCerca.setText("jButton6");
+        jButtonCerca.setText("Cerca");
+        jButtonCerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCercaActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("jLabel1");
+        jLabelCodice.setText("Codice");
 
-        jLabel2.setText("jLabel2");
+        jLabelDescrizione.setText("Descrizione");
 
-        jButtonSeleziona.setText("jButton7");
+        jButtonSeleziona.setText("Seleziona");
+        jButtonSeleziona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelezionaActionPerformed(evt);
+            }
+        });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -85,44 +102,57 @@ public class CrudUI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane3.setViewportView(jTable3);
+
+        jLabelCercaPerCodice.setText("Cerca Per Codice");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonCerca)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonModifica)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonConferma)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonModifica)
+                                    .addComponent(jLabelCodice))
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonAnnulla)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelDescrizione)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jButtonCerca)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButtonConferma)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButtonAnnulla)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButtonRimuovi)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButtonNuova))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonRimuovi)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonNuova))))
+                                .addComponent(jButtonSeleziona))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonSeleziona)))
-                .addContainerGap(449, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelCercaPerCodice))))
+                .addContainerGap(445, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabelCodice)
+                    .addComponent(jLabelDescrizione))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonModifica)
@@ -130,20 +160,36 @@ public class CrudUI extends javax.swing.JFrame {
                     .addComponent(jButtonAnnulla)
                     .addComponent(jButtonRimuovi)
                     .addComponent(jButtonNuova))
-                .addGap(18, 18, 18)
-                .addComponent(jButtonCerca)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelCercaPerCodice)
+                        .addGap(77, 77, 77)
+                        .addComponent(jButtonSeleziona))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(jButtonSeleziona)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonCerca)
+                            .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(494, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonModificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonModificaActionPerformed
+
+    private void jButtonCercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCercaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCercaActionPerformed
+
+    private void jButtonSelezionaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelezionaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSelezionaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,11 +235,13 @@ public class CrudUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonNuova;
     private javax.swing.JButton jButtonRimuovi;
     private javax.swing.JButton jButtonSeleziona;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelCercaPerCodice;
+    private javax.swing.JLabel jLabelCodice;
+    private javax.swing.JLabel jLabelDescrizione;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextFieldInserisciCodice;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,7 @@ public interface AutomabileCrud {
     
     void entraStatoRicerca();
     
-    void entraStatoAggiungi();
+    void entraStatoAdd();
     
     void entraStatoVisualizza();
     
