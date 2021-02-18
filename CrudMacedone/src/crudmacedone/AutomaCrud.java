@@ -9,8 +9,8 @@ package crudmacedone;
  *
  * @author marco
  */
-public class AutomaCrud implements State{
-    
+public class AutomaCrud implements State {
+
     private State stato;
 
     @Override
@@ -21,21 +21,24 @@ public class AutomaCrud implements State{
         System.out.println("Siamo arrivati nello stato " + stato + "\n");
     }
 
-    
-    private class RicercaEvent implements State{
+    private class RicercaEvent implements State {
 
         public RicercaEvent() {
         }
 
-
         @Override
-        public void next(Event e) {  
-            
+        public void next(Event e) {
+            if (e instanceof AddEvent) {
+
+            } else if (e instanceof SelezionaEvent) {
+            } else if (e instanceof RicercaEvent) {
+
+            }
+
         }
-        
     }
-    
-    private class AddEvent implements State{
+
+    private class AddEvent implements State {
 
         public AddEvent() {
         }
@@ -44,8 +47,8 @@ public class AutomaCrud implements State{
         public void next(Event e) {
         }
     }
-    
-    private class RimuoviEvent implements State{
+
+    private class RimuoviEvent implements State {
 
         public RimuoviEvent() {
         }
@@ -53,22 +56,22 @@ public class AutomaCrud implements State{
         @Override
         public void next(Event e) {
         }
-    
+
     }
-    
-     private class ModificaEvent implements State{
+
+    private class ModificaEvent implements State {
 
         public ModificaEvent() {
         }
 
         @Override
         public void next(Event e) {
-            
+
         }
-     
-     }
-    
-     private class VisualizzaEvent implements State{
+
+    }
+
+    private class VisualizzaEvent implements State {
 
         public VisualizzaEvent() {
         }
@@ -76,10 +79,10 @@ public class AutomaCrud implements State{
         @Override
         public void next(Event e) {
         }
-         
-     }
-     
-      private class SelezionaEvent implements State{
+
+    }
+
+    private class SelezionaEvent implements State {
 
         public SelezionaEvent() {
         }
@@ -87,6 +90,6 @@ public class AutomaCrud implements State{
         @Override
         public void next(Event e) {
         }
-      
-      }
+
+    }
 }
