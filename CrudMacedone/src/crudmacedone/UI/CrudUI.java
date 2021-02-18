@@ -5,14 +5,17 @@
  */
 package crudmacedone.UI;
 
+import crudmacedone.AutomaCrud;
+import crudmacedone.AutomabileCrud;
+
 /**
  *
  * @author 39392
  */
-public class CrudUI extends javax.swing.JFrame {
-
+public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
+AutomaCrud automa;
     /**
-     * Creates new form CrudUIù
+     * Creates new form CrudUI
      */
     public CrudUI() {
         initComponents();
@@ -180,7 +183,7 @@ public class CrudUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonModificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonModificaActionPerformed
 
     private void jButtonCercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCercaActionPerformed
@@ -244,4 +247,34 @@ public class CrudUI extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextFieldInserisciCodice;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void entraStatoRicerca() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void entraStatoAdd() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void entraStatoVisualizza() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void entraStatoModifica() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void entraStatoRimuovi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void stampaMessaggio(String msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
