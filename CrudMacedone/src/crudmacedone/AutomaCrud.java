@@ -104,15 +104,4 @@ public class AutomaCrud implements State {
         }
 
     }
-
-    private class SelezionaEvent implements State {
-
-        public SelezionaEvent() {
-        }
-
-        @Override
-        public void next(Event e) {
-        }
-
-    }
 }
