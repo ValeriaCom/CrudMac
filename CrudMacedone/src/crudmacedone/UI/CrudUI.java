@@ -27,17 +27,119 @@ public class CrudUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButtonModifica = new javax.swing.JButton();
+        jButtonConferma = new javax.swing.JButton();
+        jButtonAnnulla = new javax.swing.JButton();
+        jButtonRimuovi = new javax.swing.JButton();
+        jButtonNuova = new javax.swing.JButton();
+        jButtonCerca = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonSeleziona = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButtonModifica.setText("jButton1");
+
+        jButtonConferma.setText("jButton2");
+
+        jButtonAnnulla.setText("jButton3");
+
+        jButtonRimuovi.setText("jButton4");
+
+        jButtonNuova.setText("jButton5");
+
+        jButtonCerca.setText("jButton6");
+
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setText("jLabel2");
+
+        jButtonSeleziona.setText("jButton7");
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCerca)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonModifica)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonConferma)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonAnnulla)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonRimuovi)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonNuova))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonSeleziona)))
+                .addContainerGap(449, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonModifica)
+                    .addComponent(jButtonConferma)
+                    .addComponent(jButtonAnnulla)
+                    .addComponent(jButtonRimuovi)
+                    .addComponent(jButtonNuova))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonCerca)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(jButtonSeleziona)))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         pack();
@@ -80,5 +182,18 @@ public class CrudUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAnnulla;
+    private javax.swing.JButton jButtonCerca;
+    private javax.swing.JButton jButtonConferma;
+    private javax.swing.JButton jButtonModifica;
+    private javax.swing.JButton jButtonNuova;
+    private javax.swing.JButton jButtonRimuovi;
+    private javax.swing.JButton jButtonSeleziona;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }
