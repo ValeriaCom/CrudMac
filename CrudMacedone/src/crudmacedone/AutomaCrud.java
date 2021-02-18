@@ -89,7 +89,9 @@ public class AutomaCrud implements State {
         @Override
         public void next(Event e) {
             if (e instanceof ConfermaEvent) {
+                stato = new Visualizza();
             } else if (e instanceof AnnullaEvent) {
+                stato = new Visualizza();
             }
 
         }
@@ -106,9 +108,13 @@ public class AutomaCrud implements State {
         public void next(Event e) {
             if (e instanceof AddEvent) {
             } else if (e instanceof ModificaEvent) {
+                stato = new Modifica();
             } else if (e instanceof RimuoviEvent) {
+                stato = new Rimuovi();
             } else if (e instanceof SelezionaEvent) {
+                stato = new Visualizza();
             } else if (e instanceof RicercaEvent) {
+                 stato = new Add();
             }
         }
 
