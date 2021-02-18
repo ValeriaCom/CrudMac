@@ -9,6 +9,7 @@ import crudmacedone.AutomaCrud;
 import crudmacedone.AutomabileCrud;
 import crudmacedone.ConfermaEvent;
 import crudmacedone.ModificaEvent;
+import crudmacedone.NuovaEvent;
 import crudmacedone.RicercaEvent;
 import crudmacedone.RimuoviEvent;
 import crudmacedone.SelezionaEvent;
@@ -209,7 +210,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     }//GEN-LAST:event_jButtonModificaActionPerformed
 
     private void jButtonCercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCercaActionPerformed
-       automa.next(new RicercaEvent());
+        automa.next(new RicercaEvent());
     }//GEN-LAST:event_jButtonCercaActionPerformed
 
     private void jButtonSelezionaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelezionaActionPerformed
@@ -221,10 +222,11 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     }//GEN-LAST:event_jButtonRimuoviActionPerformed
 
     private void jButtonConfermaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfermaActionPerformed
-       automa.next(new ConfermaEvent());
+        automa.next(new ConfermaEvent());
     }//GEN-LAST:event_jButtonConfermaActionPerformed
 
     private void jButtonNuovaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuovaActionPerformed
+        automa.next(new NuovaEvent());
     }//GEN-LAST:event_jButtonNuovaActionPerformed
 
     /**
@@ -285,27 +287,27 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     public void entraStatoRicerca() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void entraStatoAdd() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void entraStatoVisualizza() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void entraStatoModifica() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void entraStatoRimuovi() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void stampaMessaggio(String msg) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
