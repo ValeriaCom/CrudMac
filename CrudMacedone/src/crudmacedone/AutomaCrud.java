@@ -27,7 +27,6 @@ public class AutomaCrud implements State{
         public RicercaEvent() {
         }
 
-        
 
         @Override
         public void next(Event e) {  
