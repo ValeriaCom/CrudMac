@@ -14,7 +14,7 @@ public class AutomaCrud implements State {
     private State stato;
     private AutomabileCrud ui;
 
-    public AutomaCrud(State stato, AutomabileCrud ui) {
+    public AutomaCrud( AutomabileCrud ui) {
         this.stato = new Ricerca();
         this.ui = ui;
     }

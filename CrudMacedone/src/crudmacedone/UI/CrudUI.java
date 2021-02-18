@@ -27,6 +27,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
      */
     public CrudUI() {
         initComponents();
+       automa=new AutomaCrud(this);
     }
 
     /**
@@ -285,7 +286,17 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     @Override
     public void entraStatoRicerca() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //inizio form
+        jButtonModifica.setEnabled(false);
+        jButtonConferma.setEnabled(false);
+        jButtonAnnulla.setEnabled(false);
+        jButtonRimuovi.setEnabled(false);
+        jButtonNuova.setEnabled(false);
+        jLabelCodice.setVisible(false);
+        jLabelDescrizione.setVisible(false);
+        //fine form
+        jButtonCerca.setEnabled(true);
+
     }
 
     @Override
