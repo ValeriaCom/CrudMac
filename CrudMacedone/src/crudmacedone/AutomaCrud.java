@@ -15,12 +15,14 @@ public class AutomaCrud implements State{
 
     @Override
     public void next(Event e) {
+        System.out.println("Siamo nello stato " + stato);
+        System.out.println("Ricevuto evento " + e);
+        stato.next(e);
+        System.out.println("Siamo arrivati nello stato " + stato + "\n");
     }
 
     
-    private class Ricerca{
-        
-        
+    private class Ricerca {
         
     }
     
