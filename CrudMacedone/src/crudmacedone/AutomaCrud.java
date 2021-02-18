@@ -10,11 +10,23 @@ package crudmacedone;
  * @author marco
  */
 public class AutomaCrud implements State{
+    
+    private State stato;
 
     @Override
     public void next(Event e) {
+    }
+
+    
+    private class Ricerca{
+        
+        
         
     }
+    
+    
+    
+    
     
     
 }
