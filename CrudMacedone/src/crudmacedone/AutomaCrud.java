@@ -41,6 +41,9 @@ public class AutomaCrud implements State {
                 stato = new Visualizza();
             } else if (e instanceof RicercaEvent) {
                 stato = new Ricerca();
+            } else {
+                System.out.println("==========> Evento inatteso!!!");
+                System.out.println("==========> L'evento " + e + " non è previsto nello stato " + this);
             }
 
         }
