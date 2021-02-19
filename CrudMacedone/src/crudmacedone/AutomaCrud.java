@@ -36,7 +36,7 @@ public class AutomaCrud implements State {
         @Override
         public void next(Event e) {
             if (e instanceof AddEvent) {
-                stato = new Add();
+                stato = new Aggiungi();
             } else if (e instanceof SelezionaEvent) {
                 stato = new Visualizza();
             } else if (e instanceof RicercaEvent) {
@@ -46,9 +46,9 @@ public class AutomaCrud implements State {
         }
     }
 
-    private class Add implements State {
+    private class Aggiungi implements State {
 
-        public Add() {
+        public Aggiungi() {
             ui.entraStatoAdd();
         }
 
@@ -107,15 +107,19 @@ public class AutomaCrud implements State {
 
         @Override
         public void next(Event e) {
-            if (e instanceof AddEvent) {
-            } else if (e instanceof ModificaEvent) {
+            if (e instanceof AddEvent) { 
+            }
+            else if (e instanceof ModificaEvent) {
                 stato = new Modifica();
             } else if (e instanceof RimuoviEvent) {
                 stato = new Rimuovi();
             } else if (e instanceof SelezionaEvent) {
                 stato = new Visualizza();
             } else if (e instanceof RicercaEvent) {
-                stato = new Add();
+                stato = new Aggiungi();
+            }
+            else if (e instanceof AddEvent){
+                stato= new Aggiungi();
             }
         }
 

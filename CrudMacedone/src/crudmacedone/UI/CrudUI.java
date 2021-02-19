@@ -236,8 +236,8 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     }//GEN-LAST:event_jButtonNuovaActionPerformed
 
     private void jButtonAnnullaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnnullaActionPerformed
-       automa.next(new AnnullaEvent());
-        
+        automa.next(new AnnullaEvent());
+
     }//GEN-LAST:event_jButtonAnnullaActionPerformed
 
     /**
@@ -315,25 +315,25 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     @Override
     public void entraStatoAdd() {
-        jButtonModifica.setVisible(false);
+        jButtonModifica.setVisible(true);
         jButtonConferma.setVisible(true);
         jButtonAnnulla.setVisible(true);
-        jButtonRimuovi.setVisible(false);
+        jButtonRimuovi.setVisible(true);
         jButtonNuova.setVisible(false);
-        jLabelCodice.setVisible(false);
-        jLabelDescrizione.setVisible(false);
+        jLabelCodice.setVisible(true);
+        jLabelDescrizione.setVisible(true);
         //fine form
-        jButtonCerca.setEnabled(true);
+        jButtonCerca.setEnabled(false);
         jButtonSeleziona.setVisible(false);
         Column1.setVisible(true);
-        jTable1.setVisible(true);
+        jTable1.setVisible(false);
     }
 
     @Override
     public void entraStatoVisualizza() {
         jButtonModifica.setVisible(false);
-        jButtonConferma.setVisible(false);
-        jButtonAnnulla.setVisible(false);
+        jButtonConferma.setVisible(true);
+        jButtonAnnulla.setVisible(true);
         jButtonRimuovi.setVisible(false);
         jButtonNuova.setVisible(false);
         jLabelCodice.setVisible(false);
@@ -349,11 +349,30 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     @Override
     public void entraStatoModifica() {
-        
+        //inizio form
+        jButtonModifica.setVisible(true);
+        jButtonConferma.setVisible(true);
+        jButtonAnnulla.setVisible(true);
+        jButtonRimuovi.setVisible(true);
+        jButtonNuova.setVisible(false);
+        jLabelCodice.setVisible(true);
+        jLabelDescrizione.setVisible(true);
+        //fine form
+        jButtonCerca.setVisible(false);
+
     }
 
     @Override
     public void entraStatoRimuovi() {
+        jButtonModifica.setVisible(true);
+        jButtonConferma.setVisible(true);
+        jButtonAnnulla.setVisible(true);
+        jButtonRimuovi.setVisible(true);
+        jButtonNuova.setVisible(false);
+        jLabelCodice.setEnabled(false);
+        jLabelDescrizione.setEnabled(false);
+        jButtonCerca.setVisible(false);
+
     }
 
     @Override
@@ -362,7 +381,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     @Override
     public void entraStatoAnnulla() {
-          jButtonModifica.setVisible(false);
+        jButtonModifica.setVisible(false);
         jButtonConferma.setVisible(false);
         jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(false);
@@ -376,11 +395,12 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jTable1.setVisible(true);
         jScrollPane1.setVisible(true);
         jScrollPane3.setVisible(true);
-        
+
     }
 
     @Override
     public void entraStatoConferma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
     }
 }
