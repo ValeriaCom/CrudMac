@@ -139,6 +139,12 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
         jLabelCercaPerCodice.setText("Cerca Per Codice");
 
+        jTextFieldInserisciCodice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldInserisciCodiceActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -240,6 +246,10 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     }//GEN-LAST:event_jButtonAnnullaActionPerformed
 
+    private void jTextFieldInserisciCodiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldInserisciCodiceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldInserisciCodiceActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -306,7 +316,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jLabelDescrizione.setVisible(false);
         //fine form
         jButtonCerca.setEnabled(true);
-        jButtonSeleziona.setVisible(false);
+        jButtonSeleziona.setVisible(true);
         Column1.setVisible(true);
         jTable1.setVisible(true);
         jScrollPane1.setVisible(true);
@@ -316,17 +326,19 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     @Override
     public void entraStatoAdd() {
         jButtonModifica.setVisible(true);
-        jButtonConferma.setVisible(true);
-        jButtonAnnulla.setVisible(true);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(true);
-        jButtonNuova.setVisible(false);
+        jButtonNuova.setVisible(true);
         jLabelCodice.setVisible(true);
         jLabelDescrizione.setVisible(true);
         //fine form
         jButtonCerca.setEnabled(false);
         jButtonSeleziona.setVisible(false);
-        Column1.setVisible(true);
+        Column1.setVisible(false);
         jTable1.setVisible(false);
+        jTextFieldInserisciCodice.setEditable(false);
+        
     }
 
     @Override
@@ -339,24 +351,25 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jLabelCodice.setVisible(false);
         jLabelDescrizione.setVisible(false);
         //fine form
-        jButtonCerca.setEnabled(true);
+        jButtonCerca.setVisible(true);
         jButtonSeleziona.setVisible(false);
-        Column1.setVisible(true);
-        jTable1.setVisible(true);
-        jScrollPane1.setVisible(true);
-        jScrollPane3.setVisible(true);
+        Column1.setVisible(false);
+        jTable1.setVisible(false);
+        jScrollPane1.setVisible(false);
+        jScrollPane3.setVisible(false);
+        jTextFieldInserisciCodice.setEditable(false);
     }
 
     @Override
     public void entraStatoModifica() {
         //inizio form
         jButtonModifica.setVisible(true);
-        jButtonConferma.setVisible(true);
-        jButtonAnnulla.setVisible(true);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(true);
         jButtonNuova.setVisible(false);
-        jLabelCodice.setVisible(true);
-        jLabelDescrizione.setVisible(true);
+        jLabelCodice.setVisible(false);
+        jLabelDescrizione.setVisible(false);
         //fine form
         jButtonCerca.setVisible(false);
 
@@ -368,10 +381,10 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jButtonConferma.setVisible(true);
         jButtonAnnulla.setVisible(true);
         jButtonRimuovi.setVisible(true);
-        jButtonNuova.setVisible(false);
+        jButtonNuova.setVisible(true);
         jLabelCodice.setEnabled(false);
         jLabelDescrizione.setEnabled(false);
-        jButtonCerca.setVisible(false);
+        jButtonCerca.setVisible(true);
 
     }
 

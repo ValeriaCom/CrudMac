@@ -226,6 +226,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldInserisciCodice">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldInserisciCodiceActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
