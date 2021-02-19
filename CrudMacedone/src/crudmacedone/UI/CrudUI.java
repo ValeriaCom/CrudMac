@@ -379,28 +379,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     public void stampaMessaggio(String msg) {
     }
 
-    @Override
-    public void entraStatoAnnulla() {
-        jButtonModifica.setVisible(false);
-        jButtonConferma.setVisible(false);
-        jButtonAnnulla.setVisible(false);
-        jButtonRimuovi.setVisible(false);
-        jButtonNuova.setVisible(true);
-        jLabelCodice.setVisible(false);
-        jLabelDescrizione.setVisible(false);
-        //fine form
-        jButtonCerca.setEnabled(true);
-        jButtonSeleziona.setVisible(false);
-        Column1.setVisible(true);
-        jTable1.setVisible(true);
-        jScrollPane1.setVisible(true);
-        jScrollPane3.setVisible(true);
+   
 
-    }
-
-    @Override
-    public void entraStatoConferma() {
-        
-        
-    }
+   
 }

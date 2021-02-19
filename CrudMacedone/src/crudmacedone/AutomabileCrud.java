@@ -10,21 +10,17 @@ package crudmacedone;
  * @author aleur
  */
 public interface AutomabileCrud {
-    
+
     void entraStatoRicerca();
-    
+
     void entraStatoAdd();
-    
-    void entraStatoConferma();
-    
-    void entraStatoAnnulla();
-    
+
     void entraStatoVisualizza();
-    
+
     void entraStatoModifica();
-    
+
     void entraStatoRimuovi();
-    
+
     void stampaMessaggio(String msg);
-    
+
 }

@@ -10,22 +10,4 @@ package crudmacedone;
  * @author marco
  */
 public class AddEvent implements Event {
-    
-    private String Prodotto;
-
-    public AddEvent(String Prodotto) {
-        this.Prodotto = Prodotto;
-    }
-
-    public String getProdotto() {
-        return Prodotto;
-    }
-
-    @Override
-    public String toString() {
-        return "AddEvent{" + "Prodotto=" + Prodotto + '}';
-    }
-    
-    
-    
 }
