@@ -14,9 +14,9 @@ public class AutomaCrud implements State {
     private State stato;
     private AutomabileCrud ui;
 
-    public AutomaCrud( AutomabileCrud ui) {
-        this.stato = new Ricerca();
+    public AutomaCrud(AutomabileCrud ui) {
         this.ui = ui;
+        this.stato = new Ricerca();
     }
 
     @Override
@@ -114,7 +114,7 @@ public class AutomaCrud implements State {
             } else if (e instanceof SelezionaEvent) {
                 stato = new Visualizza();
             } else if (e instanceof RicercaEvent) {
-                 stato = new Add();
+                stato = new Add();
             }
         }
 
