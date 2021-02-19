@@ -51,7 +51,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jLabelDescrizione = new javax.swing.JLabel();
         jButtonSeleziona = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        Column1 = new javax.swing.JTable();
         jLabelCercaPerCodice = new javax.swing.JLabel();
         jTextFieldInserisciCodice = new javax.swing.JTextField();
 
@@ -118,7 +118,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
             }
         });
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        Column1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -129,7 +129,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(Column1);
 
         jLabelCercaPerCodice.setText("Cerca Per Codice");
 
@@ -150,12 +150,9 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelDescrizione)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jButtonCerca)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jButtonConferma)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jButtonAnnulla)))
+                                        .addComponent(jButtonConferma)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButtonAnnulla)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButtonRimuovi)
                                         .addGap(18, 18, 18)
@@ -169,7 +166,9 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(70, 70, 70)
+                                .addComponent(jButtonCerca))
                             .addComponent(jLabelCercaPerCodice))))
                 .addContainerGap(445, Short.MAX_VALUE))
         );
@@ -267,6 +266,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Column1;
     private javax.swing.JButton jButtonAnnulla;
     private javax.swing.JButton jButtonCerca;
     private javax.swing.JButton jButtonConferma;
@@ -280,22 +280,24 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextFieldInserisciCodice;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void entraStatoRicerca() {
         //inizio form
-        jButtonModifica.setEnabled(false);
-        jButtonConferma.setEnabled(false);
-        jButtonAnnulla.setEnabled(false);
-        jButtonRimuovi.setEnabled(false);
-        jButtonNuova.setEnabled(false);
+        jButtonModifica.setVisible(false);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
+        jButtonRimuovi.setVisible(false);
+        jButtonNuova.setVisible(false);
         jLabelCodice.setVisible(false);
         jLabelDescrizione.setVisible(false);
         //fine form
         jButtonCerca.setEnabled(true);
+        jButtonSeleziona.setVisible(false);
+        Column1.setVisible(false);
+        jTable1.setVisible(false);
 
     }
 
