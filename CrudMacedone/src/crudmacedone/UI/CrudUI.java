@@ -27,7 +27,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
      */
     public CrudUI() {
         initComponents();
-       automa=new AutomaCrud(this);
+        automa = new AutomaCrud(this);
     }
 
     /**
@@ -167,7 +167,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(70, 70, 70)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonCerca))
                             .addComponent(jLabelCercaPerCodice))))
                 .addContainerGap(445, Short.MAX_VALUE))
@@ -290,39 +290,66 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jButtonConferma.setVisible(false);
         jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(false);
+        jButtonNuova.setVisible(true);
+        jLabelCodice.setVisible(false);
+        jLabelDescrizione.setVisible(false);
+        //fine form
+        jButtonCerca.setEnabled(true);
+        jButtonSeleziona.setVisible(false);
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane3.setVisible(true);
+    }
+
+    @Override
+    public void entraStatoAdd() {
+        jButtonModifica.setVisible(false);
+        jButtonConferma.setVisible(true);
+        jButtonAnnulla.setVisible(true);
+        jButtonRimuovi.setVisible(false);
         jButtonNuova.setVisible(false);
         jLabelCodice.setVisible(false);
         jLabelDescrizione.setVisible(false);
         //fine form
         jButtonCerca.setEnabled(true);
         jButtonSeleziona.setVisible(false);
-        Column1.setVisible(false);
-        jTable1.setVisible(false);
-
-    }
-
-    @Override
-    public void entraStatoAdd() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
     }
 
     @Override
     public void entraStatoVisualizza() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        jButtonModifica.setVisible(false);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
+        jButtonRimuovi.setVisible(false);
+        jButtonNuova.setVisible(false);
+        jLabelCodice.setVisible(false);
+        jLabelDescrizione.setVisible(false);
+        //fine form
+        jButtonCerca.setEnabled(true);
+        jButtonSeleziona.setVisible(false);
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane3.setVisible(true);
     }
 
     @Override
     public void entraStatoModifica() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public void entraStatoRimuovi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void stampaMessaggio(String msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void entraStatoAnnulla() {
     }
 }
