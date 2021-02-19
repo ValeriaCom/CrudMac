@@ -5,6 +5,7 @@
  */
 package crudmacedone.UI;
 
+import crudmacedone.AnnullaEvent;
 import crudmacedone.AutomaCrud;
 import crudmacedone.AutomabileCrud;
 import crudmacedone.ConfermaEvent;
@@ -85,6 +86,11 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         });
 
         jButtonAnnulla.setText("Annulla");
+        jButtonAnnulla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnnullaActionPerformed(evt);
+            }
+        });
 
         jButtonRimuovi.setText("Rimuovi");
         jButtonRimuovi.addActionListener(new java.awt.event.ActionListener() {
@@ -229,6 +235,11 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         automa.next(new NuovaEvent());
     }//GEN-LAST:event_jButtonNuovaActionPerformed
 
+    private void jButtonAnnullaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnnullaActionPerformed
+       automa.next(new AnnullaEvent());
+        
+    }//GEN-LAST:event_jButtonAnnullaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -351,5 +362,25 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
 
     @Override
     public void entraStatoAnnulla() {
+          jButtonModifica.setVisible(false);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
+        jButtonRimuovi.setVisible(false);
+        jButtonNuova.setVisible(true);
+        jLabelCodice.setVisible(false);
+        jLabelDescrizione.setVisible(false);
+        //fine form
+        jButtonCerca.setEnabled(true);
+        jButtonSeleziona.setVisible(false);
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane3.setVisible(true);
+        
+    }
+
+    @Override
+    public void entraStatoConferma() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

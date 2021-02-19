@@ -61,23 +61,7 @@ public class AutomaCrud implements State {
             }
         }
     }
-    
-    private class Annulla implements State {
-
-        @Override
-        public void next(Event e) {
-            if (e instanceof AddEvent) {
-                stato = new Ricerca();
-            } else if ( e instanceof ModificaEvent){
-                stato = new Visualizza();
-            }
-            else if (e instanceof RimuoviEvent){
-                stato = new Visualizza();
-            }
-        }
-        
-    }
-
+   
     private class Rimuovi implements State {
 
         public Rimuovi() {
@@ -109,6 +93,7 @@ public class AutomaCrud implements State {
             } else if (e instanceof AnnullaEvent) {
                 stato = new Visualizza();
             }
+            
 
         }
 

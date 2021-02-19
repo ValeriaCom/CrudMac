@@ -15,6 +15,8 @@ public interface AutomabileCrud {
     
     void entraStatoAdd();
     
+    void entraStatoConferma();
+    
     void entraStatoAnnulla();
     
     void entraStatoVisualizza();
