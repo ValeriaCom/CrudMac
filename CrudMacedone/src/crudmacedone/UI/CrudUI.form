@@ -56,24 +56,27 @@
                                   <Component id="jButtonModifica" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelCodice" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="jButtonConferma" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelDescrizione" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButtonConferma" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButtonAnnulla" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButtonRimuovi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButtonNuova" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jButtonAnnulla" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonRimuovi" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonNuova" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButtonSeleziona" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTextFieldCodice" min="-2" pref="95" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDescrizione" min="-2" pref="101" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelDescrizione" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -97,10 +100,21 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelCodice" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelDescrizione" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelDescrizione" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="jLabelCodice" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextFieldCodice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDescrizione" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -127,7 +141,7 @@
                       <Component id="jScrollPane3" min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -182,14 +196,8 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelCodice">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Codice"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelDescrizione">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Descrizione"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonSeleziona">
       <Properties>
@@ -228,6 +236,16 @@
     <Component class="javax.swing.JTextField" name="jTextFieldInserisciCodice">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldInserisciCodiceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldCodice">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldCodiceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldDescrizione">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDescrizioneActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -39,6 +39,10 @@ public class AutomaCrud implements State {
                 stato = new Aggiungi();
             } else if (e instanceof SelezionaEvent) {
                 stato = new Visualizza();
+                
+               } else if (e instanceof NuovaEvent) {
+                stato = new Modifica();
+            
             } else if (e instanceof RicercaEvent) {
                 stato = new Visualizza();
             } else {
@@ -61,6 +65,8 @@ public class AutomaCrud implements State {
                 stato = new Visualizza();
             } else if (e instanceof AnnullaEvent) {
                 stato = new Ricerca();
+            } else if (e instanceof AnnullaEvent) {
+                stato = new Ricerca();
             } else {
                 System.out.println("==========> Evento inatteso!!!");
                 System.out.println("==========> L'evento " + e + " non è previsto nello stato " + this);
@@ -80,6 +86,14 @@ public class AutomaCrud implements State {
                 stato = new Ricerca();
             } else if (e instanceof AnnullaEvent) {
                 stato = new Visualizza();
+            } else if (e instanceof RimuoviEvent) {
+                stato = new Visualizza();
+            } else if (e instanceof RicercaEvent) {
+                stato = new Visualizza();
+            } else if (e instanceof ModificaEvent) {
+                stato = new Modifica();
+                 } else if (e instanceof NuovaEvent) {
+                stato = new Visualizza();
             } else {
                 System.out.println("==========> Evento inatteso!!!");
                 System.out.println("==========> L'evento " + e + " non è previsto nello stato " + this);
@@ -98,9 +112,12 @@ public class AutomaCrud implements State {
         @Override
         public void next(Event e) {
             if (e instanceof ConfermaEvent) {
-                stato = new Visualizza();
+                stato = new Ricerca();
             } else if (e instanceof AnnullaEvent) {
-                stato = new Visualizza();
+                stato = new Ricerca();
+                
+//                } else if (e instanceof ModificaEvent) {
+//                stato = new Modifica();
             } else {
                 System.out.println("==========> Evento inatteso!!!");
                 System.out.println("==========> L'evento " + e + " non è previsto nello stato " + this);
@@ -128,6 +145,8 @@ public class AutomaCrud implements State {
                 stato = new Ricerca();
             } else if (e instanceof ConfermaEvent) {
                 stato = new Ricerca();
+            } else if (e instanceof NuovaEvent) {
+                stato = new Modifica();
             } else {
                 System.out.println("==========> Evento inatteso!!!");
                 System.out.println("==========> L'evento " + e + " non è previsto nello stato " + this);

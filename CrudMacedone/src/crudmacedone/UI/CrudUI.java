@@ -55,6 +55,8 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         Column1 = new javax.swing.JTable();
         jLabelCercaPerCodice = new javax.swing.JLabel();
         jTextFieldInserisciCodice = new javax.swing.JTextField();
+        jTextFieldCodice = new javax.swing.JTextField();
+        jTextFieldDescrizione = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,10 +115,6 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
             }
         });
 
-        jLabelCodice.setText("Codice");
-
-        jLabelDescrizione.setText("Descrizione");
-
         jButtonSeleziona.setText("Seleziona");
         jButtonSeleziona.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +143,18 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
             }
         });
 
+        jTextFieldCodice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCodiceActionPerformed(evt);
+            }
+        });
+
+        jTextFieldDescrizione.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDescrizioneActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -158,21 +168,25 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonModifica)
                                     .addComponent(jLabelCodice))
+                                .addGap(112, 112, 112)
+                                .addComponent(jButtonConferma)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelDescrizione)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButtonConferma)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonAnnulla)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonRimuovi)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonNuova))))
+                                .addComponent(jButtonAnnulla)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonRimuovi)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonNuova))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonSeleziona))))
+                                .addComponent(jButtonSeleziona))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jTextFieldCodice, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25)
+                                .addComponent(jTextFieldDescrizione, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelDescrizione, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,10 +201,17 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelCodice)
-                    .addComponent(jLabelDescrizione))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelDescrizione, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelCodice)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldCodice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDescrizione, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonModifica)
@@ -211,7 +232,7 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
                             .addComponent(jTextFieldInserisciCodice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -249,6 +270,14 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     private void jTextFieldInserisciCodiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldInserisciCodiceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldInserisciCodiceActionPerformed
+
+    private void jTextFieldCodiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCodiceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCodiceActionPerformed
+
+    private void jTextFieldDescrizioneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDescrizioneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDescrizioneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,6 +330,8 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextFieldCodice;
+    private javax.swing.JTextField jTextFieldDescrizione;
     private javax.swing.JTextField jTextFieldInserisciCodice;
     // End of variables declaration//GEN-END:variables
 
@@ -312,8 +343,6 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(false);
         jButtonNuova.setVisible(true);
-        jLabelCodice.setVisible(false);
-        jLabelDescrizione.setVisible(false);
         //fine form
         jButtonCerca.setEnabled(true);
         jButtonSeleziona.setVisible(true);
@@ -321,6 +350,10 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jTable1.setVisible(true);
         jScrollPane1.setVisible(true);
         jScrollPane3.setVisible(true);
+        jTextFieldInserisciCodice.setText("");
+        jTextFieldCodice.setVisible(false);
+        jTextFieldDescrizione.setVisible(false);
+        jLabelCercaPerCodice.setVisible(true);
     }
 
     @Override
@@ -330,61 +363,76 @@ public class CrudUI extends javax.swing.JFrame implements AutomabileCrud {
         jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(true);
         jButtonNuova.setVisible(true);
-        jLabelCodice.setVisible(true);
-        jLabelDescrizione.setVisible(true);
         //fine form
         jButtonCerca.setEnabled(false);
         jButtonSeleziona.setVisible(false);
         Column1.setVisible(false);
         jTable1.setVisible(false);
-        jTextFieldInserisciCodice.setEditable(false);
+        jTextFieldInserisciCodice.setText("");
+        jTextFieldCodice.setVisible(true);
+        jTextFieldDescrizione.setVisible(true);
         
     }
 
     @Override
     public void entraStatoVisualizza() {
-        jButtonModifica.setVisible(false);
-        jButtonConferma.setVisible(true);
-        jButtonAnnulla.setVisible(true);
-        jButtonRimuovi.setVisible(false);
-        jButtonNuova.setVisible(false);
-        jLabelCodice.setVisible(false);
-        jLabelDescrizione.setVisible(false);
+
+        jButtonModifica.setVisible(true);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
+        jButtonRimuovi.setVisible(true);
+        jButtonNuova.setVisible(true);
         //fine form
-        jButtonCerca.setVisible(true);
-        jButtonSeleziona.setVisible(false);
-        Column1.setVisible(false);
-        jTable1.setVisible(false);
-        jScrollPane1.setVisible(false);
-        jScrollPane3.setVisible(false);
-        jTextFieldInserisciCodice.setEditable(false);
+        jButtonCerca.setEnabled(true);
+        jButtonSeleziona.setVisible(true);
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane3.setVisible(true);
+        jTextFieldCodice.setVisible(true);
+        jTextFieldDescrizione.setVisible(true);
+        jTextFieldInserisciCodice.setText("");
     }
 
     @Override
     public void entraStatoModifica() {
         //inizio form
-        jButtonModifica.setVisible(true);
-        jButtonConferma.setVisible(false);
-        jButtonAnnulla.setVisible(false);
-        jButtonRimuovi.setVisible(true);
+        jButtonModifica.setVisible(false);
+        jButtonConferma.setVisible(true);
+        jButtonAnnulla.setVisible(true);
+        jButtonRimuovi.setVisible(false);
         jButtonNuova.setVisible(false);
-        jLabelCodice.setVisible(false);
-        jLabelDescrizione.setVisible(false);
         //fine form
-        jButtonCerca.setVisible(false);
+        jButtonCerca.setVisible(true);
+        jTextFieldCodice.setVisible(true);
+        jTextFieldDescrizione.setVisible(true);
+        Column1.setVisible(false);
+        jTable1.setVisible(false);
+        jScrollPane1.setVisible(false);
+        jScrollPane3.setVisible(false);
+        jTextFieldInserisciCodice.setText("");
+        jButtonSeleziona.setVisible(false);
+        jLabelCercaPerCodice.setVisible(false);
+        
 
     }
 
     @Override
     public void entraStatoRimuovi() {
         jButtonModifica.setVisible(true);
-        jButtonConferma.setVisible(true);
-        jButtonAnnulla.setVisible(true);
+        jButtonConferma.setVisible(false);
+        jButtonAnnulla.setVisible(false);
         jButtonRimuovi.setVisible(true);
         jButtonNuova.setVisible(true);
-        jLabelCodice.setEnabled(false);
-        jLabelDescrizione.setEnabled(false);
         jButtonCerca.setVisible(true);
+         jLabelCercaPerCodice.setVisible(true);
+        jTextFieldCodice.setText("");
+         jTextFieldInserisciCodice.setVisible(true);
+        jTextFieldDescrizione.setText("");
+        Column1.setVisible(true);
+        jTable1.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane3.setVisible(true);
 
     }
 
